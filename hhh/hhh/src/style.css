@@ -1,0 +1,365 @@
+.links li a {
+  color: white; /* Set the text color to white */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* This will make only the "Get Started" link text white */
+#getstarted a {
+  color: white;
+  background-color: #7a7a7a; /* Change button color to a different type of gray */
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Start Landing Page */
+.landing-page header {
+  min-height: 80px;
+  display: flex;
+  background-color: #333; /* Same color as footer */
+}
+
+.landing-page header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-page header .logo {
+  color: white; /* Change logo text color to white */
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.landing-page header .links {
+  display: flex;
+  align-items: center;
+}
+
+.landing-page header .links li {
+  margin-left: 30px;
+  color: white; /* Change links text color to white */
+  cursor: pointer;
+  transition: .3s;
+}
+
+.landing-page header .links li:last-child {
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #FFF;
+  background-color: #7a7a7a; /* Change button color to a different type of gray */
+}
+
+.landing-page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(100vh - 80px);
+}
+
+.landing-page .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+
+.landing-page .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.landing-page .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #7a7a7a; /* Change button color to a different type of gray */
+}
+
+.landing-page .content .image {
+  position: relative;
+}
+
+.landing-page .content .image img {
+  max-width: 35%;
+  float: right;
+}
+
+/* Animation for elements to appear from the ground */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate {
+  animation: slideUp 1s ease-out;
+}
+
+.footer-animate {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.footer-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Inline text styling */
+.inline-text {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Circle styling for footer headings */
+.circle {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: white; /* Change background color to white */
+  color: #5d5d5d; /* Change text color to grey */
+}
+
+/* End Landing Page */
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0; /* Reduced padding */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+footer h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #4CAF50;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .info h1 {
+    font-size: 28px;
+  }
+
+  .info button {
+    padding: 10px 15px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .landing-page {
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+    .content {
+      margin-top: 50px;
+    }
+    .contact-form-container {
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+    .footer-container {
+      padding: 20px;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+
+      
+    
+    
+      
+      
+      
+      
+    
+    
+      
+      
+      
+      
+      
+    
+    
+      
+      
+    
+
+
+<style>
+  /* Existing styles (optional to keep here for context) */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .projects-container {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px; /* Space between project squares */
+    margin-top: 20px;
+  }
+
+  .project {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .project img {
+    width: 100%;
+    height: 150px; /* Ensures all images are square */
+    object-fit: cover; /* Maintains aspect ratio while cropping to fit */
+  }
+
+  .project p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .projects-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+</style>
